@@ -1,14 +1,14 @@
 #include <MIDI.h>
 
+#define ACCESS_LED_PIN 13
+
 void onNoteOff(byte ch, byte note, byte vel);
 void onNoteOn(byte ch, byte note, byte vel);
-
-const ACCESS_LED_PIN = 13;
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
 void setup() {
-    pinMode(LED_PIN, OUTPUT);
+    pinMode(ACCESS_LED_PIN, OUTPUT);
     MIDI.setHandleNoteOff(onNoteOff);
     MIDI.setHandleNoteOn(onNoteOn);
     MIDI.begin(MIDI_CHANNEL_OMNI);
