@@ -5,7 +5,7 @@
 特にライセンスを付ける予定はありません。  
 ソース見るなり動かすなり煮るなり焼くなりご自由にどうぞ。
 ## 作者
-Sora Tonami &lt;ms0503@outlook.com&gt;
+Sora Tonami &lt;ms0503@outlook.com&gt;  
 Twitter:
 
 - [@ms0503\_](https://twitter.com/ms0503_/)
