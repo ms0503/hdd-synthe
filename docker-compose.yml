@@ -1,0 +1,24 @@
+
+version: 3
+services:
+  build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/hdd_synthe
+      - ./lib:/root/Arduino/libraries:ro
+    command: >
+      bash -c "chmod +x ./build.sh && ./build.sh"
+  upload:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/hdd_synthe
+      - ./lib:/root/Arduino/libraries:ro
+    devices:
+      - /dev/ttyS10:/dev/ttyTarget
+    command: >
+      bash -c "chmod +x ./upload.sh && ./upload.sh"
+
